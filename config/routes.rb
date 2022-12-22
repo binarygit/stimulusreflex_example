@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'example#show'
   resource :example, constraints: -> { Rails.env.development? }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
