@@ -31,6 +31,8 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    action-cable-redis-backport (1.0.0)
+      actioncable (>= 5.0, < 7.1)
     actioncable (7.0.4)
       actionpack (= 7.0.4)
       activesupport (= 7.0.4)
@@ -157,6 +159,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.10-x86_64-linux)
       racc (~> 1.4)
+    permessage_deflate (0.1.4)
     public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -192,6 +195,9 @@ GEM
       zeitwerk (~> 2.5)
     rake (13.0.6)
     redis (4.8.0)
+    redis-session-store (0.11.5)
+      actionpack (>= 6, < 8)
+      redis (>= 3, < 6)
     regexp_parser (2.6.1)
     reline (0.3.2)
       io-console (~> 0.5)
@@ -241,15 +247,18 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  action-cable-redis-backport (~> 1)
   bootsnap
   cable_ready!
   capybara
   debug
   importmap-rails
   jbuilder
+  permessage_deflate (>= 0.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
   redis (~> 4.0)
+  redis-session-store (~> 0.11.5)
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)

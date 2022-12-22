@@ -73,3 +73,9 @@ end
 
 gem "cable_ready", github: "stimulusreflex/cable_ready", branch: "master"
 gem "stimulus_reflex", github: "stimulusreflex/stimulus_reflex", branch: "new_installer"
+
+gem "action-cable-redis-backport", "~> 1"
+
+gem "redis-session-store", "~> 0.11.5"
+
+gem "permessage_deflate", ">= 0.1"
